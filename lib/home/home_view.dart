@@ -4,6 +4,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medicare/constants/app_colors.dart';
 import 'package:medicare/data/app_data.dart';
+import 'package:medicare/medcare_services/article_view_page.dart';
 
 import '../core/nav_manager.dart';
 import '../medcare_services/doctors/doctor_profile_page.dart';
@@ -37,12 +38,16 @@ class HomeView extends StatelessWidget {
                             EdgeInsets.only(top: 12),
                         child: Column(
                           children: [
-                            Text(
-                                "Experience Seamless Healthcare Management with MedCare",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.w600)).animate().scale(duration: 900.ms,curve: Curves.easeOutBack,delay: 600.ms),
+                            Text("Experience Seamless Healthcare Management with MedCare",
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.w600))
+                                .animate()
+                                .scale(
+                                    duration: 900.ms,
+                                    curve: Curves.easeOutBack,
+                                    delay: 600.ms),
                           ],
                         ),
                       ),
@@ -54,7 +59,10 @@ class HomeView extends StatelessWidget {
                         height: 150,
                         width: 150,
                       ),
-                    ).animate().scaleXY(duration: 1.seconds,curve: Curves.easeOutBack,delay: 600.ms),
+                    ).animate().scaleXY(
+                        duration: 1.seconds,
+                        curve: Curves.easeOutBack,
+                        delay: 600.ms),
                   ],
                 ),
               ),
@@ -68,7 +76,8 @@ class HomeView extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9).withValues(alpha: 0.2)),
                 ),
-              ).animate().moveX(begin: -100, end: 0, duration: 600.ms, curve: Curves.easeIn),
+              ).animate().moveX(
+                  begin: -100, end: 0, duration: 600.ms, curve: Curves.easeIn),
               Positioned(
                 top: -40,
                 right: -180,
@@ -79,7 +88,8 @@ class HomeView extends StatelessWidget {
                       shape: BoxShape.circle,
                       color: Color(0xFFD9D9D9).withValues(alpha: 0.2)),
                 ),
-              ).animate().moveX(begin: 100, end: 0, duration: 600.ms, curve: Curves.easeIn),
+              ).animate().moveX(
+                  begin: 100, end: 0, duration: 600.ms, curve: Curves.easeIn),
             ],
           ),
           Column(
@@ -138,73 +148,73 @@ class HomeView extends StatelessWidget {
                       final doctor = AppData.doctors[index];
                       final delay = (index * 80).ms;
                       return Hero(
-                        tag: 'doctor-${doctor.name}',
-                        child: GestureDetector(
-                          onTap: () {
-                            NavManager.goTo(DoctorProfilePage(doctor: doctor));
-                          },
-                          child: Stack(
-                            children: [
-                              Container(
-                                margin: EdgeInsets.all(8),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  image: DecorationImage(
-                                      image: AssetImage(doctor.image),
-                                      fit: BoxFit.cover),
+                          tag: 'doctor-${doctor.name}',
+                          child: GestureDetector(
+                            onTap: () {
+                              NavManager.goTo(
+                                  DoctorProfilePage(doctor: doctor));
+                            },
+                            child: Stack(
+                              children: [
+                                Container(
+                                  margin: EdgeInsets.all(8),
+                                  height: 180,
+                                  width: 160,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    image: DecorationImage(
+                                        image: AssetImage(doctor.image),
+                                        fit: BoxFit.cover),
+                                  ),
                                 ),
-                              ),
-                              Container(
-                                margin: EdgeInsets.all(8),
-                                padding: EdgeInsets.only(bottom: 12),
-                                height: 180,
-                                width: 160,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  gradient: LinearGradient(
-                                    begin: Alignment.topCenter,
-                                    end: Alignment.bottomCenter,
-                                    colors: [
-                                      Colors.transparent,
-                                      Colors.black.withValues(alpha: 0.3),
-                                      Colors.black.withValues(alpha: 0.8),
+                                Container(
+                                  margin: EdgeInsets.all(8),
+                                  padding: EdgeInsets.only(bottom: 12),
+                                  height: 180,
+                                  width: 160,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(12),
+                                    gradient: LinearGradient(
+                                      begin: Alignment.topCenter,
+                                      end: Alignment.bottomCenter,
+                                      colors: [
+                                        Colors.transparent,
+                                        Colors.black.withValues(alpha: 0.3),
+                                        Colors.black.withValues(alpha: 0.8),
+                                      ],
+                                    ),
+                                  ),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.end,
+                                    children: [
+                                      Text(
+                                        doctor.name,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w600,
+                                          fontSize: 14,
+                                          fontFamily: 'Lexend',
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        maxLines: 1,
+                                      ),
+                                      Text(
+                                        doctor.speciality,
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontWeight: FontWeight.w400,
+                                          fontSize: 12,
+                                          fontFamily: 'Lexend',
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                        maxLines: 1,
+                                      )
                                     ],
                                   ),
                                 ),
-                                child: Column(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: [
-                                    Text(
-                                      doctor.name,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600,
-                                        fontSize: 14,
-                                        fontFamily: 'Lexend',
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      maxLines: 1,
-                                    ),
-                                    Text(
-                                      doctor.speciality,
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 12,
-                                        fontFamily: 'Lexend',
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                      maxLines: 1,
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      );
+                              ],
+                            ),
+                          ));
                     }),
               ),
               Padding(
@@ -230,7 +240,9 @@ class HomeView extends StatelessWidget {
                     itemBuilder: (context, index) {
                       final delay = (index * 80).ms;
                       final product = AppData.products[index];
-                      return Image.asset(product.image).animate().fade(delay: delay);
+                      return Image.asset(product.image)
+                          .animate()
+                          .fade(delay: delay);
                     }),
               ),
               Padding(
@@ -245,6 +257,54 @@ class HomeView extends StatelessWidget {
                   ),
                 ),
               ),
+              ...List.generate(2, (index) {
+                return GestureDetector(
+                  onTap: (){
+                    NavManager.goTo(ArticleViewPage(tag: 'article$index'));
+                  },
+                  child: Container(
+                    padding: EdgeInsets.all(10),
+                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: Colors.grey[400]!),
+                    ),
+                    child: Row(
+                      spacing: 12,
+                      children: [
+                        Hero(
+                          tag : 'article$index',
+                          child: Image.asset(
+                            'assets/images/article$index.png',
+                            height: 100,
+                            width: 100,
+                          ),
+                        ),
+                        Expanded(
+                          child: Column(
+                            spacing: 2,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'Disease Prevention',
+                                style: TextStyle(color: Colors.black54),
+                              ),
+                              Text(
+                                  'Understanding Vaccination, The Importance of Preventative Medicine'),
+                              Text(
+                                '14-Jan-2025',
+                                style:
+                                    TextStyle(fontSize: 12, color: Colors.grey),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              }),
+              SizedBox(height: 20)
             ],
           )
         ],
