@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medicare/constants/app_colors.dart';
+import 'package:medicare/home/history_view.dart';
 import 'package:medicare/home/home_view.dart';
 import 'package:medicare/home/profile_view.dart';
 import 'package:medicare/home/services_view.dart';
@@ -93,7 +94,7 @@ class _ViewHandlerState extends State<ViewHandler> {
       case 1:
         return ServicesView();
       case 2:
-        return ServicesView(); //TODO change this to HistoryView
+        return HistoryView();
       case 3:
         return ProfileView();
       default:

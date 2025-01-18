@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-
+import 'package:medicare/components/buttons/primary_button.dart';
+import 'package:medicare/constants/app_colors.dart';
 
 class AllReminders extends StatelessWidget {
   const AllReminders({super.key});
@@ -33,58 +34,9 @@ class AllReminders extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              AnimatedContainer(duration: 130.ms,
-              padding:
-                EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(12),
-                color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withValues(alpha: 0.2),
-                    blurRadius: 10,
-                    spreadRadius: 2,
-                  ),
-                ],
-              ),
-                child: Column(
-                  spacing: 8,
-                  children: [
-                    Image.asset('assets/images/medication.png', height: 140, width: 140,),
-                    Text('Manage your medication',
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.black,
-                        fontFamily: 'Lexend',
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    Text('Add the medicine you are taking and create a reminder to take the medicine',
-                    textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: Colors.grey[600],
-                        fontSize: 12,
-                      ),
-          
-                    ),
-                  ],
-                ),
-          
-          
-          
-              ),
-              Text(
-                'History of taken Medication',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: Colors.black,
-                  fontFamily: 'Lexend',
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              AnimatedContainer(duration: 130.ms,
-                padding:
-                EdgeInsets.all(20),
+              AnimatedContainer(
+                duration: 130.ms,
+                padding: EdgeInsets.all(20),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
                   color: Colors.white,
@@ -99,8 +51,13 @@ class AllReminders extends StatelessWidget {
                 child: Column(
                   spacing: 8,
                   children: [
-                    Image.asset('assets/images/medication.png', height: 140, width: 140,),
-                    Text('View all your medication history',
+                    Image.asset(
+                      'assets/images/medication.png',
+                      height: 140,
+                      width: 140,
+                    ),
+                    Text(
+                      'Manage your medication',
                       style: TextStyle(
                         fontSize: 15,
                         color: Colors.black,
@@ -108,34 +65,74 @@ class AllReminders extends StatelessWidget {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    Text('Add the medicine you are taking and create a reminder to take the medicine',
+                    Text(
+                      'Add the medicine you are taking and create a reminder to take the medicine',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: Colors.grey[600],
                         fontSize: 12,
                       ),
-          
                     ),
                   ],
                 ),
-          
-          
-          
               ),
-              Spacer(),
-              Center(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-          
-                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 16),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(40),
-                    ),
-                  ),
-                  child: Text('Add Medication Reminder'),
+              Text(
+                'History of taken Medication',
+                style: TextStyle(
+                  fontSize: 15,
+                  color: Colors.black,
+                  fontFamily: 'Lexend',
+                  fontWeight: FontWeight.w600,
                 ),
               ),
+              AnimatedContainer(
+                duration: 130.ms,
+                padding: EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withValues(alpha: 0.2),
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                    ),
+                  ],
+                ),
+                child: Column(
+                  spacing: 8,
+                  children: [
+                    Image.asset(
+                      'assets/images/medication.png',
+                      height: 140,
+                      width: 140,
+                    ),
+                    Text(
+                      'View all your medication history',
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.black,
+                        fontFamily: 'Lexend',
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(
+                      'Add the medicine you are taking and create a reminder to take the medicine',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.grey[600],
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Spacer(),
+              PrimaryButton(
+                text: 'Add Medication',
+                buttonColor: primaryColor,
+                textColor: Colors.white,
+              )
             ],
           ),
         ),
