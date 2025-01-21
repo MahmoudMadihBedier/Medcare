@@ -3,10 +3,9 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medicare/core/nav_manager.dart';
 import 'package:medicare/data/app_data.dart';
-import 'package:medicare/medcare_services/hospitals/all_hospitals_page.dart';
-import 'package:medicare/medcare_services/medication_reminder/all_reminders.dart';
-
 import '../medcare_services/doctors/doctors_page.dart';
+import '../medcare_services/hospitals/all_hospitals_page.dart';
+import '../medcare_services/medication_reminder/all_reminders.dart';
 
 class ServicesView extends StatelessWidget {
   const ServicesView({super.key});

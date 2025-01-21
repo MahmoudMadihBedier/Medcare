@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:medicare/core/nav_manager.dart';
-import 'package:medicare/home/view_handler.dart';
+import '../../home/view_handler.dart';
 
 class AppointmentConfirmedPage extends StatelessWidget {
   const AppointmentConfirmedPage({super.key});

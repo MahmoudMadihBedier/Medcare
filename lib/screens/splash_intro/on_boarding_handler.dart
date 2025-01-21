@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:medicare/home/view_handler.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../constants/app_colors.dart';
 import '../../core/nav_manager.dart';
 import '../../main.dart';
+import '../home/view_handler.dart';
 
 class OnBoardingHandler extends StatefulWidget {
   const OnBoardingHandler({super.key});

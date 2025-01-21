@@ -3,7 +3,7 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:medicare/data/app_data.dart';
 
-import '../../constants/app_colors.dart';
+import '../../../constants/app_colors.dart';
 
 class HospitalDetailPage extends StatelessWidget {
   final Hospital hospital;
@@ -89,13 +89,17 @@ class HospitalDetailPage extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Wrap(
-                spacing: 7,
-                runSpacing: 7,
-                children: List.generate(AppData.specializations.length, (index) {
+              Container(
+                height: 200,
+
+                child: GridView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: AppData.specializations.length,
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 4,crossAxisSpacing: 6,mainAxisSpacing: 6), itemBuilder: (context,index){
                   final delay = (index * 100).ms;
                   final speciality = AppData.specializations[index];
-                  return Container(
+
+                  return  Container(
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(7),
@@ -134,6 +138,7 @@ class HospitalDetailPage extends StatelessWidget {
                   ).animate().fade(delay: delay);
                 }),
               ),
+
               Text(
                 'Room types',
                 style: TextStyle(

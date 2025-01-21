@@ -2,11 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:medicare/constants/app_colors.dart';
 import 'package:medicare/data/app_data.dart';
-import 'package:medicare/medcare_services/article_view_page.dart';
-
-import '../core/nav_manager.dart';
+import '../../core/nav_manager.dart';
+import '../medcare_services/article_view_page.dart';
 import '../medcare_services/doctors/doctor_profile_page.dart';
 
 class HomeView extends StatelessWidget {
@@ -115,6 +113,8 @@ class HomeView extends StatelessWidget {
                     Expanded(
                         child: Text(
                       'Search for a doctor, hospital or medication',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                       style: TextStyle(color: Colors.grey),
                     )),
                     SvgPicture.asset(
@@ -144,9 +144,8 @@ class HomeView extends StatelessWidget {
                     scrollDirection: Axis.horizontal,
                     itemCount: AppData.doctors.length,
                     itemBuilder: (context, index) {
-                      final count = index + 8;
                       final doctor = AppData.doctors[index];
-                      final delay = (index * 80).ms;
+
                       return Hero(
                           tag: 'doctor-${doctor.name}',
                           child: GestureDetector(

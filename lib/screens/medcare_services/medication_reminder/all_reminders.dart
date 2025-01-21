@@ -127,12 +127,7 @@ class AllReminders extends StatelessWidget {
                   ],
                 ),
               ),
-              // Spacer(),
-              PrimaryButton(
-                text: 'Add Medication',
-                buttonColor: primaryColor,
-                textColor: Colors.white,
-              )
+
             ],
           ),
         ),

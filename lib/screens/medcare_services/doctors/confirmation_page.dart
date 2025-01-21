@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:medicare/components/buttons/primary_button.dart';
 import 'package:medicare/core/nav_manager.dart';
-import 'package:medicare/medcare_services/doctors/appointment_confirmed_page.dart';
-import '../../constants/app_colors.dart';
-import '../../data/app_data.dart';
+import '../../../constants/app_colors.dart';
+import '../../../data/app_data.dart';
+import 'appointment_confirmed_page.dart';
 
 class AppointmentConfirmationPage extends StatefulWidget {
   final Doctor doctor;

@@ -4,9 +4,8 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:medicare/core/nav_manager.dart';
 import 'package:medicare/data/app_data.dart';
-import 'package:medicare/medcare_services/hospitals/hospital_detail_page.dart';
-
-import '../../constants/app_colors.dart';
+import '../../../constants/app_colors.dart';
+import 'hospital_detail_page.dart';
 
 class AllHospitalsPage extends StatelessWidget {
   const AllHospitalsPage({super.key});

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:medicare/constants/app_colors.dart';
-import 'package:medicare/home/history_view.dart';
-import 'package:medicare/home/home_view.dart';
-import 'package:medicare/home/profile_view.dart';
-import 'package:medicare/home/services_view.dart';
+import 'package:medicare/screens/home/profile_view.dart';
+import 'package:medicare/screens/home/services_view.dart';
+
+import 'history_view.dart';
+import 'home_view.dart';
 
 class ViewHandler extends StatefulWidget {
   const ViewHandler({super.key});

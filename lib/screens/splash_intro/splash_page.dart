@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:medicare/constants/app_colors.dart';
 import 'package:medicare/core/nav_manager.dart';
-import 'package:medicare/home/view_handler.dart';
-import 'package:medicare/screens/splash_intro/onBoarding_handler.dart';
-
+import 'package:medicare/screens/splash_intro/on_boarding_handler.dart';
 import '../../main.dart';
+import '../home/view_handler.dart';
 
 class SplashPage extends StatefulWidget {
   const SplashPage({super.key});
