@@ -1,0 +1,2 @@
+/home/madih/mobile_projects/flutter_projects/Medcare/android/app/.cxx/Debug/20346g3e/x86/CMakeFiles/edit_cache.dir
+/home/madih/mobile_projects/flutter_projects/Medcare/android/app/.cxx/Debug/20346g3e/x86/CMakeFiles/rebuild_cache.dir

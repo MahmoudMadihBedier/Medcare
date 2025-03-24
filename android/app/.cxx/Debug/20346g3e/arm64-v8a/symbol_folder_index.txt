@@ -1,0 +1,1 @@
+/home/madih/mobile_projects/flutter_projects/Medcare/build/app/intermediates/cxx/Debug/20346g3e/obj/arm64-v8a

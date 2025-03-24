@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-Color primaryColor = Color(0xFF1F75FE);
-Color secondaryColor = Color(0xFFA6D5A7);
-Color bgColor = Color(0xFFFFFFFF);
-Color textColor = Color(0xFF000000);
+Color primaryColor = Color(0xFF00796B);   // Teal Green (symbolizing health and renewal)
+Color secondaryColor = Color(0xFF80CBC4); // Light Teal (for a soothing effect)
+Color bgColor = Color(0xFFF1F8F9);       // Soft Cyan White (clean and fresh)
+Color textColor = Color(0xFF2C2C2C);     // Dark Gray (for readability and contrast)
