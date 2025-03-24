@@ -36,18 +36,18 @@ class AppData {
 
   static List<Doctor> doctors = [
     Doctor(
-        name: 'Dr. Luca Rossi',
-        image: 'assets/images/doctor0.png',
+        name: 'Dr. fatma mohmmed',
+        image: '',
         speciality: 'Cardiologist',
         experience: '5 years'),
     Doctor(
-        name: 'Dr. Marco Ferrari',
+        name: 'Dr. Nadeer Nabil',
         image: 'assets/images/doctor1.png',
         speciality: 'Dentist',
         experience: '3 years'),
     Doctor(
-        name: 'Dr. Sofia Muller',
-        image: 'assets/images/doctor2.png',
+        name: 'Dr. Salma Magedy',
+        image: '',
         speciality: 'Pediatrician',
         experience: '7 years'),
     Doctor(
