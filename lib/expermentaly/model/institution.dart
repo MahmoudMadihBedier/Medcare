@@ -27,21 +27,32 @@ class Institution {
     print("$name received ${goods.quantity} units of ${goods.name}.");
   }
 
-  void sellGoods(Supplier supplier, String goodsName, int quantity, double sellingPrice) {
-    Goods? goods = inventory.firstWhere(
-            (item) => item.name == goodsName && item.quantity >= quantity,
-        orElse: () => Goods("", 0, 0));
+  // void sellGoods(Supplier supplier, String goodsName, int quantity, double sellingPrice) {
+  //   Goods? goods = inventory.firstWhere(
+  //           (item) => item.name == goodsName && item.quantity >= quantity,
+  //       orElse: () => Goods("", 0, 0));
 
-    if (goods.name.isEmpty) {
-      print("$name does not have enough stock of $goodsName to sell!");
-      return;
-    }
+  //   if (goods.name.isEmpty) {
+  //     print("$name does not have enough stock of $goodsName to sell!");
+  //     return;
+  //   }
 
-    double totalRevenue = sellingPrice * quantity;
-    wallet.deposit(totalRevenue);
-    goods.quantity -= quantity;
+  //   double totalRevenue = sellingPrice * quantity;
+  //   wallet.deposit(totalRevenue);
+  //   goods.quantity -= quantity;
 
-    supplier.addGoods(Goods(goodsName, sellingPrice, quantity));
-    print("$name sold $quantity units of $goodsName to ${supplier.name}.");
+  //   supplier.addGoods(Goods(goodsName, sellingPrice, quantity));
+  //   print("$name sold $quantity units of $goodsName to ${supplier.name}.");
+  // }
+
+  void addGoods(Goods goods) {
+    inventory.add(goods);
+    print("$name added ${goods.quantity} units of ${goods.name} to inventory.");
   }
+  void removeGoods(Goods goods) {
+    inventory.remove(goods);
+    print("$name removed ${goods.quantity} units of ${goods.name} from inventory.");
+  }
+  
+
 }
