@@ -14,12 +14,12 @@ class AppData {
   static List<Hospital> hospitals = [
     Hospital(
         name: 'مستشفى القاهرة التخصصي',
-        image: 'assets/images/hospital0.png',
+        image: '',
         location: "شارع مصطفى النحاس، مدينة نصر، القاهرة",
         number: '01001234567'),
     Hospital(
         name: 'مستشفى مصر الدولي',
-        image: 'assets/images/hospital1.png',
+        image: '',
         location: "شارع الجلاء، وسط البلد، القاهرة",
         number: '01002345678'),
     Hospital(
@@ -29,7 +29,7 @@ class AppData {
         number: '01003456789'),
     Hospital(
         name: 'مستشفى أسيوط الجامعي',
-        image: 'assets/images/hospital3.png',
+        image: '',
         location: "شارع الجامعة، أسيوط",
         number: '01004567890'),
   ];
@@ -37,7 +37,7 @@ class AppData {
   static List<Doctor> doctors = [
     Doctor(
         name: 'د. فاطمة محمد',
-        image: "",
+        image: "assets/images/user.png",
         speciality: 'أخصائية قلب',
         experience: '5 سنوات خبرة'),
     Doctor(
@@ -47,27 +47,27 @@ class AppData {
         experience: '3 سنوات خبرة'),
     Doctor(
         name: 'د. سلمى مجدي',
-        image: "",
+        image: "assets/images/user.png",
         speciality: 'طبيبة أطفال',
         experience: '7 سنوات خبرة'),
     Doctor(
         name: 'د. أحمد علي',
-        image: 'assets/images/doctor3.png',
+        image: 'assets/images/user.png',
         speciality: 'أخصائي جلدية',
         experience: '4 سنوات خبرة'),
     Doctor(
         name: 'د. منى سعيد',
-        image: 'assets/images/doctor4.png',
+        image: 'assets/images/user.png',
         speciality: 'جراحة عامة',
         experience: '4 سنوات خبرة'),
     Doctor(
         name: 'د. هناء عبد الرحمن',
-        image: 'assets/images/doctor5.png',
+        image: 'assets/images/user.png',
         speciality: 'أمراض نساء وتوليد',
         experience: '4 سنوات خبرة'),
     Doctor(
         name: 'د. خالد فاروق',
-        image: 'assets/images/doctor6.png',
+        image: 'assets/images/user.png',
         speciality: 'طب عام',
         experience: '4 سنوات خبرة'),
   ];

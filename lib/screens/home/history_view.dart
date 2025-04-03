@@ -34,13 +34,13 @@ class _HistoryViewState extends State<HistoryView> {
                     vertical: 10,
                   ),
                   child: Text(
-                    'Upcoming',
+                    'القادمة',
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: type == 0 ? Colors.white : Colors.grey),
                   ),
                 ),
-                1: Text('Completed',
+                1: Text('المكتملة',
                     style: TextStyle(
                         fontWeight: FontWeight.w600,
                         color: type == 1 ? Colors.white : Colors.grey))
@@ -136,14 +136,14 @@ class UpcomingHistoryView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Date & time",
+                          "التاريخ والوقت",
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: Colors.grey),
                         ),
                         Text(
-                          'Wednesday, 29 Feb 04:00 pm',
+                          'الأربعاء، 29 فبراير 04:00 مساءً',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -157,14 +157,14 @@ class UpcomingHistoryView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Location',
+                          'الموقع',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: Colors.grey),
                         ),
                         Text(
-                          'Bella Vista Surgery Clinic, Via Garibaldi 10, Milan, Italy',
+                          'عيادات القاهرة التخصصية، شارع مصطفى النحاس، مدينة نصر',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -180,7 +180,7 @@ class UpcomingHistoryView extends StatelessWidget {
                 children: [
                   Expanded(
                       child: ElevatedButton(
-                          onPressed: () {}, child: Text("Reschedule"))),
+                          onPressed: () {}, child: Text("إعادة جدولة"))),
                 ],
               ),
             ],
@@ -252,14 +252,14 @@ class CompletedHistoryView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Date & time",
+                          "التاريخ والوقت",
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: Colors.grey),
                         ),
                         Text(
-                          'Wednesday, 29 Feb 04:00 pm',
+                          'الأربعاء، 29 فبراير 04:00 مساءً',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -273,14 +273,14 @@ class CompletedHistoryView extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Location',
+                          'الموقع',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
                               color: Colors.grey),
                         ),
                         Text(
-                          'Bella Vista Surgery Clinic, Via Garibaldi 10, Milan, Italy',
+                          'مستشفى مصر الدولي، شارع الجلاء، القاهرة',
                           style: TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.w600,
@@ -302,7 +302,7 @@ class CompletedHistoryView extends StatelessWidget {
                           side: WidgetStatePropertyAll(BorderSide(color: primaryColor)),
                           foregroundColor: WidgetStatePropertyAll(primaryColor)
                         ),
-                          onPressed: () {}, child: Text("Add review",style: TextStyle(
+                          onPressed: () {}, child: Text("إضافة تقييم",style: TextStyle(
                           fontSize: 13,
                           fontFamily: 'Lexend',
                           fontWeight: FontWeight.w500
@@ -312,7 +312,7 @@ class CompletedHistoryView extends StatelessWidget {
                         style: ButtonStyle(
                           padding: WidgetStatePropertyAll(EdgeInsets.zero)
                         ),
-                          onPressed: () {}, child: Text("Next appointment",style: TextStyle(
+                          onPressed: () {}, child: Text("الحجز القادم",style: TextStyle(
                         fontSize: 13,
                         fontFamily: 'Lexend',
                         fontWeight: FontWeight.w500

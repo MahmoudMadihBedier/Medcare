@@ -21,7 +21,6 @@ class HomeView extends StatelessWidget {
                 duration: 130.ms,
                 height: 200,
                 width: double.infinity,
-                // padding: EdgeInsets.all(12),
                 decoration: BoxDecoration(
                   gradient: LinearGradient(colors: [
                     Color(0xFF2A083B),
@@ -36,7 +35,7 @@ class HomeView extends StatelessWidget {
                             EdgeInsets.only(top: 12),
                         child: Column(
                           children: [
-                            Text("Experience Seamless Healthcare Management with MedCare",
+                            Text("إدارة رعاية صحية سلسة مع تطبيق ميد كير",
                                     style: TextStyle(
                                         color: Colors.white,
                                         fontSize: 20,
@@ -112,7 +111,7 @@ class HomeView extends StatelessWidget {
                     ),
                     Expanded(
                         child: Text(
-                      'Search for a doctor, hospital or medication',
+                      'ابحث عن طبيب، مستشفى أو دواء',
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: TextStyle(color: Colors.grey),
@@ -129,7 +128,7 @@ class HomeView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
-                  'Doctors Near You',
+                  'أطباء قريبون منك',
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -219,7 +218,7 @@ class HomeView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
-                  'Best Selling Products',
+                  'أفضل المنتجات',
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -247,7 +246,7 @@ class HomeView extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 16.0),
                 child: Text(
-                  'Health Article',
+                  'مقالات طبية',
                   style: TextStyle(
                     fontSize: 15,
                     color: Colors.black,
@@ -285,13 +284,13 @@ class HomeView extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Disease Prevention',
+                                'الوقاية من الأمراض',
                                 style: TextStyle(color: Colors.black54),
                               ),
                               Text(
-                                  'Understanding Vaccination, The Importance of Preventative Medicine'),
+                                  'فهم التطعيمات وأهمية الطب الوقائي'),
                               Text(
-                                '14-Jan-2025',
+                                '١٤ يناير ٢٠٢٥',
                                 style:
                                     TextStyle(fontSize: 12, color: Colors.grey),
                               ),
